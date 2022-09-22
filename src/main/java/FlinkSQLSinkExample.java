@@ -12,7 +12,7 @@ public class FlinkSQLSinkExample {
         StreamTableEnvironment tenv = StreamTableEnvironment.create(env, environmentSettings);
         /* 使用datagen生成测试数据
         'rows-per-second' =  '10' 每秒发送10条数据
-        'number-of-rows' = '100'  一共发送100条数据，不设置的话会无限发送数据
+        'number-of-rows' = '100'  一共发送100条数据，不设置的话会无限量发送数据
          */
         tenv.executeSql("CREATE TABLE order_info_source (\n" +
                 "    order_date DATE,\n" +
