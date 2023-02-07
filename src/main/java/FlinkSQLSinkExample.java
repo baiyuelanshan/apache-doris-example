@@ -29,8 +29,8 @@ public class FlinkSQLSinkExample {
                 "  'fields.user_id.min' = '10001',\n" +
                 "  'fields.user_id.max' = '20001',\n" +
                 "  'fields.buy_num.min' = '10',\n" +
-                "  'fields.buy_num.max' = '20',\n" +
-                "  'number-of-rows' = '100'" +
+                "  'fields.buy_num.max' = '20'\n" +
+                //"  'number-of-rows' = '100'" +
                 ")");
 
 
@@ -61,10 +61,11 @@ public class FlinkSQLSinkExample {
                 "WITH (\n" +
                 "'connector' = 'doris',   \n" +
                 "'fenodes' = '192.168.56.104:8030',   \n" +
-                "'table.identifier' = 'test.order_info_example',   \n" +
+                "'table.identifier' = 'test.order_info',   \n" +
                 "'username' = 'test',   \n" +
                 "'password' = 'password123',   \n" +
-                "'sink.label-prefix' = 'sink_doris_label_8'\n" +
+                "'sink.enable-2pc' = 'true',   \n" +
+                "'sink.label-prefix' = 'sink_doris_label_13'\n" +
                         ")"
                 );
 
